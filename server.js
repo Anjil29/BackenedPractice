@@ -38,3 +38,30 @@
 //     response.send("Car Submitted");
 // });
 
+const express= require("express"); // it is used to import the framework of express (instance liya h frameowrk ka)
+const app=express(); // used to create backened application
+
+const PORT=4000; // hmare server ka address
+
+//body parser
+app.use(express.json());
+
+// listen me do chize pass krte hai port no and callback  fn
+app.listen(PORT,()=>{
+    console.log(`Server is running at port ${PORT}`)
+});
+
+app.get("/",(req,res)=>{
+    // console.log("This is home page");
+    res.send("<h1>This is home page<h1/>")
+})
+
+app.post("/car",(req,res)=>{
+    console.log("Received a post request")
+})
+
+// mounting : sare routes isme mount ho jayege
+// sare routes import krake ek jgh mount krdenge
+// base url dete hai basically 
+
+
