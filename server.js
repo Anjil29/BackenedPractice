@@ -57,7 +57,7 @@ app.get("/",(req,res)=>{
 })
 
 app.post("/car",(req,res)=>{
-    console.log("Received a post request")
+    console.log("Received a new requiest")
 })
 
 // mounting : sare routes isme mount ho jayege
